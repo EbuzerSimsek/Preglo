@@ -654,30 +654,58 @@ code {
 }
 
 .topic-card {
-  display: block;
-  padding: 1.25rem 1.35rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 0.9rem;
+  row-gap: 0.35rem;
+  align-items: start;
+  padding: 1.2rem 1.25rem;
   border: 1px solid var(--line);
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.45);
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  background: rgba(255, 255, 255, 0.55);
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
 }
 
 .topic-card:hover {
   border-color: rgba(226, 75, 110, 0.35);
+  background: rgba(255, 255, 255, 0.8);
   transform: translateY(-2px);
+}
+
+.topic-icon {
+  grid-row: 1 / span 2;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-deep);
+  background: linear-gradient(160deg, rgba(255, 212, 220, 0.85), rgba(255, 232, 214, 0.7));
+  flex-shrink: 0;
+}
+
+.topic-icon svg {
+  width: 22px;
+  height: 22px;
 }
 
 .topic-card h3 {
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 600;
   letter-spacing: -0.02em;
-  margin-bottom: 0.4rem;
+  line-height: 1.25;
+  margin: 0;
+  padding-top: 0.15rem;
 }
 
 .topic-card p {
   color: var(--ink-soft);
-  font-size: 0.95rem;
+  font-size: 0.94rem;
+  line-height: 1.45;
+  margin: 0;
 }
 
 .inline-links {
@@ -806,6 +834,11 @@ code {
 @media (max-width: 700px) {
   .topic-grid {
     grid-template-columns: 1fr;
+  }
+
+  .topic-icon {
+    width: 40px;
+    height: 40px;
   }
 
   .page-hero h1 {
