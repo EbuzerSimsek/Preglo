@@ -594,3 +594,197 @@ code {
     transition: none;
   }
 }
+
+/* SEO nav + content pages */
+.seo-nav {
+  display: none;
+  gap: 1.1rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.seo-nav a:hover {
+  color: var(--accent);
+}
+
+@media (min-width: 860px) {
+  .seo-nav {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+.topic-grid {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--pad) clamp(2.5rem, 7vh, 4rem);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.topic-card {
+  display: block;
+  padding: 1.25rem 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.45);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.topic-card:hover {
+  border-color: rgba(226, 75, 110, 0.35);
+  transform: translateY(-2px);
+}
+
+.topic-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+
+.topic-card p {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.inline-links {
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  margin-bottom: 1.25rem;
+}
+
+.inline-links a {
+  color: var(--accent-deep);
+  border-bottom: 1px solid rgba(226, 75, 110, 0.35);
+}
+
+.content-block {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: clamp(2rem, 6vh, 3.5rem) var(--pad) clamp(3rem, 8vh, 5rem);
+}
+
+.content-block h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+}
+
+.faq details {
+  border-top: 1px solid var(--line);
+  padding: 1rem 0;
+}
+
+.faq details:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq details p {
+  margin-top: 0.65rem;
+  color: var(--ink-soft);
+}
+
+.page-hero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(2rem, 6vh, 3.5rem) var(--pad) 1.5rem;
+}
+
+.page-hero .eyebrow {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.65rem;
+}
+
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 5vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  max-width: 18ch;
+  margin-bottom: 0.9rem;
+  text-wrap: balance;
+}
+
+.page-hero .lede {
+  max-width: 42ch;
+}
+
+.prose {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 var(--pad) clamp(3rem, 8vh, 5rem);
+}
+
+.prose h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 2rem 0 0.75rem;
+}
+
+.prose p,
+.prose li {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  margin-bottom: 0.9rem;
+}
+
+.prose ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose li {
+  margin-bottom: 0.45rem;
+}
+
+.breadcrumb {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1rem var(--pad) 0;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
+.breadcrumb a:hover {
+  color: var(--accent);
+}
+
+.page-cta {
+  margin-top: 1.75rem;
+}
+
+@media (max-width: 700px) {
+  .topic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero h1 {
+    max-width: none;
+  }
+
+  .seo-nav {
+    display: none;
+  }
+}
