@@ -94,6 +94,17 @@ code {
   font-weight: 700;
   font-size: 1.25rem;
   letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.brand-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .header-cta {
@@ -133,6 +144,23 @@ code {
   line-height: 1;
   color: var(--accent);
   margin-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-mark-icon {
+  width: clamp(52px, 8vw, 72px);
+  height: clamp(52px, 8vw, 72px);
+  border-radius: 16px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.closing .brand-mark-icon {
+  width: clamp(44px, 6vw, 56px);
+  height: clamp(44px, 6vw, 56px);
+  border-radius: 12px;
 }
 
 .hero h1 {
